@@ -172,12 +172,6 @@ namespace Zver {
             return $this->REQUIRED_DATA['HTTPS'];
         }
 
-        public function removePath()
-        {
-            $this->REQUIRED_DATA['PATH'] = '/';
-            return $this;
-        }
-
         public function setPort($port)
         {
             $this->REQUIRED_DATA['PORT'] = $port;
@@ -200,5 +194,24 @@ namespace Zver {
             return $this;
         }
 
+        public function setPath($path)
+        {
+            $path = StringHelper::load($path)
+                                ->ensureBeginningIs('/');
+
+            if ($path->isEquals('/')) {
+                $this->REQUIRED_DATA['PATH'] = '/';
+            } else {
+                $path->removeEnding('/');
+                $this->REQUIRED_DATA['PATH'] = $path->get();
+            }
+
+            return $this;
+        }
+
+        public function removePath()
+        {
+            return $this->setPath('/');
+        }
     }
 }
