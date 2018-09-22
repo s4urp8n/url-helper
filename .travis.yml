@@ -9,6 +9,6 @@ before_script:
   - composer install
   - wget https://phar.phpunit.de/phpunit.phar
   - chmod 777 ./phpunit.phar
-  - sudo php -S localhost:55 -t ./root
+  - php -S localhost:80 -t ./root
 script:
   - ./phpunit.phar
