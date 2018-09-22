@@ -64,6 +64,7 @@ namespace Zver {
                 return StringHelper::load($_SERVER['HTTP_HOST'])
                                    ->trimSpaces()
                                    ->toLowerCase()
+                                   ->setFirstPart(':')
                                    ->removeEnding('/')
                                    ->get();
             }
@@ -88,6 +89,7 @@ namespace Zver {
                 foreach ($keys as $key) {
                     $filtered[$key] = filter_input(INPUT_GET, $key);
                 }
+                return $filtered;
             }
             return [];
         }
