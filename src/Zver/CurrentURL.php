@@ -14,6 +14,22 @@ namespace Zver {
             'PATH'  => null,
         ];
 
+        public function getPath()
+        {
+            return $this->REQUIRED_DATA['PATH'];
+        }
+
+        public function getPort()
+        {
+            return $this->REQUIRED_DATA['PORT'];
+        }
+
+        public function getHost()
+        {
+            return $this->REQUIRED_DATA['HOST'];
+        }
+
+
         protected static function isStandardPort($port)
         {
             return in_array($port, [
@@ -215,5 +231,6 @@ namespace Zver {
         {
             return $this->setPath('/');
         }
+
     }
 }
