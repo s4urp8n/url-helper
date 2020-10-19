@@ -19,8 +19,9 @@
     }
   },
   "require": {
-    "zver/string-helper": "^2.2",
-    "zver/common": "^3.0"
+    "zver/string-helper": "^3",
+    "zver/common": "^3.0",
+    "phpunit/phpunit": "^8.5"
   },
   "require-dev": {
   }
