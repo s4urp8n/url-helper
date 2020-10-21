@@ -1,7 +1,7 @@
 {
   "name": "zver/current-url",
   "description": "This package helps manipulate URLS",
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "config": {
     "optimize-autoloader": true
   },
