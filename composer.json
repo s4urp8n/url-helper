@@ -20,9 +20,9 @@
   },
   "require": {
     "zver/string-helper": "dev-master",
-    "zver/common": "dev-master",
-    "phpunit/phpunit": "*"
+    "zver/common": "dev-master"
   },
   "require-dev": {
+     "phpunit/phpunit": "*"
   }
 }
